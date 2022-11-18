@@ -1,0 +1,26 @@
+{
+    "Config": {
+        "Download Dir": "./tmp"
+    },
+    "Files": {
+        "Lookup": {
+            "url": "https://data.dft.gov.uk/road-accidents-safety-data/Road-Safety-Open-Dataset-Data-Guide.xlsx",
+            "friendly file name": "Lookup.csv"
+        },
+        "Casualties": {
+            "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-casualty-1979-2021.csv",
+            "friendly file name": "Casualties.csv",
+            "lookup value": "Casualty"
+        },
+        "Vehicles": {
+            "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-vehicle-1979-2021.csv",
+            "friendly file name": "Vehicles.csv",
+            "lookup value": "Vehicle"
+        },
+        "Accidents": {
+            "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-accident-1979-2021.csv",
+            "friendly file name": "Accidents.csv",
+            "lookup value": "Accident"
+        }
+    }
+}
