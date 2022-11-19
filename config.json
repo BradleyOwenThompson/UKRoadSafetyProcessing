@@ -5,7 +5,7 @@
     "Files": {
         "Lookup": {
             "url": "https://data.dft.gov.uk/road-accidents-safety-data/Road-Safety-Open-Dataset-Data-Guide.xlsx",
-            "friendly file name": "Lookup.csv"
+            "friendly file name": "Lookup.xlsx"
         },
         "Casualties": {
             "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-casualty-1979-2021.csv",
