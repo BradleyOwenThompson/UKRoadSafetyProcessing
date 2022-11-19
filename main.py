@@ -27,7 +27,6 @@ class DatasetProcessor:
 
     class File(Enum):
         """ Define constants for the files"""
-
         LOOKUP     = "Lookup"
         VEHICLES   = "Vehicles"
         ACCIDENTS  = "Accidents"
@@ -38,9 +37,9 @@ class DatasetProcessor:
         """ Constructor, defining variables """
 
         # Fields
-        self.__temp_dir = None        # type: str
-        self.__data_files = {}        # type: dict
-        self.lookups = {}             # type: dict
+        self.__temp_dir = None
+        self.__data_files = {}
+        self.lookups = {}
 
         # Process config.json
         self.__temp_dir, self.__data_files = self.__process_config_file()
@@ -52,8 +51,8 @@ class DatasetProcessor:
     def __process_config_file(self) -> None:
         """ Configures The Director And Downloads Missing Files """
 
-        temp_dir = None # type: str
-        data_files = {} # type: dict
+        temp_dir = None
+        data_files = {}
 
         # Read config.json
         with open('config.json', 'r', encoding='UTF-8') as file:
@@ -71,7 +70,8 @@ class DatasetProcessor:
 
         # Check If The Download Folder Exists
         if not os.path.exists(self.__temp_dir):
-            # Create Folder If Doesn't Existit does not exist
+
+            # Create Folder If Doesn't Exist does not exist
             os.makedirs(self.__temp_dir)
             print("New Directory 'temp' Created")
 
@@ -97,7 +97,6 @@ class DatasetProcessor:
         """ Process the Lookup.csv file, trasnforming it into a dictionary """
 
         print("Processing Lookup.xlsx")
-
         lookup_dict = {}
 
         # Load the Excel sheet 
@@ -106,10 +105,11 @@ class DatasetProcessor:
 
         # Create lookup dictionary
         map_cols = {"A": "table", "B": "column", "C": "value", "D": "label"}
-        
+
         # Iterate through Excel sheet
         for row in range(1, dataframe.max_row):
             table, column, value, label = ..., ..., ..., ...
+
             for col, name in map_cols.items():
                 match name:
                     case "table":   table = dataframe[col][row].value
@@ -117,7 +117,7 @@ class DatasetProcessor:
                     case "value":   value = dataframe[col][row].value
                     case "label":   label = dataframe[col][row].value
 
-            # Add Table if doesn't exist 
+            # Add Table if doesn't exist
             if table not in lookup_dict.keys():
                 lookup_dict[table] = {}
 
@@ -131,9 +131,7 @@ class DatasetProcessor:
                 lookup_dict[table][column][value] = label
 
         print("Completed Processing Lookup.xlsx")
-
         return lookup_dict
-
 
 
 if __name__ == '__main__':
