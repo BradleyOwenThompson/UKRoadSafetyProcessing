@@ -1,26 +1,30 @@
 {
     "Config": {
-        "Download Dir": "./tmp"
+        "download dir": "./tmp",
+        "processed dir": "./processed",
+        "processing_window_size": 500000
     },
     "Files": {
         "Lookup": {
             "url": "https://data.dft.gov.uk/road-accidents-safety-data/Road-Safety-Open-Dataset-Data-Guide.xlsx",
-            "friendly file name": "Lookup.xlsx"
+            "ignore table": ["e_scooter"],
+            "ignore values": ["(DD/MM/YYYY)", "(HH:MM)", "-1", "1 to 9999", null],
+            "filename": "Lookup.xlsx"
         },
         "Casualties": {
             "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-casualty-1979-2021.csv",
-            "friendly file name": "Casualties.csv",
-            "lookup value": "Casualty"
+            "filename": "Casualties.csv",
+            "lookup": "Casualty"
         },
         "Vehicles": {
             "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-vehicle-1979-2021.csv",
-            "friendly file name": "Vehicles.csv",
-            "lookup value": "Vehicle"
+            "filename": "Vehicles.csv",
+            "lookup": "Vehicle"
         },
         "Accidents": {
             "url": "https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-accident-1979-2021.csv",
-            "friendly file name": "Accidents.csv",
-            "lookup value": "Accident"
+            "filename": "Accidents.csv",
+            "lookup": "Accident"
         }
     }
 }
